@@ -6,15 +6,17 @@ import {
   Image,
   Text,
   VStack,
-  extendTheme,
+  Link,
+  HStack,
 } from "@chakra-ui/react";
 import Asset11 from "../Img/ASSET_11.png";
+import { FaFacebook, FaInstagram } from "react-icons/fa6";
 
 function Hero() {
   return (
     <>
-      <VStack justifyContent="center" alignItems="center" bgColor="red">
-        <Box bgColor="blue" w="1440px" h="1024px">
+      <VStack justifyContent="center" alignItems="center">
+        <Box w="1440px" h="1024px">
           <Grid gridTemplateColumns="1fr 1fr" position="relative">
             <Box
               position="absolute"
@@ -51,6 +53,26 @@ function Hero() {
                     digital illustration, and the captivating world of tattoo
                     artistry.
                   </Text>
+                </Box>
+                <Box mt="36px" color="#F77E08">
+                  <HStack gap="56px">
+                    <Link
+                      href="https://www.facebook.com/gio.alvarez11"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      fontSize="34px"
+                    >
+                      <FaFacebook />
+                    </Link>
+                    <Link
+                      href="https://www.instagram.com/giyowzki/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      fontSize="34px"
+                    >
+                      <FaInstagram />
+                    </Link>
+                  </HStack>
                 </Box>
               </VStack>
             </Box>
