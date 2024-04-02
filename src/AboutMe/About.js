@@ -7,7 +7,7 @@ import Heroabout from "../Img/Layer 5 1.png";
 import Herome from "../Img/Layer 6.png";
 import Heroline from "../Img/Layer 7.png";
 
-function Hero3() {
+function About() {
   return (
     <>
       <Box w="1440px" h="1024px">
@@ -87,4 +87,4 @@ function Hero3() {
   );
 }
 
-export default Hero3;
+export default About;

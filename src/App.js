@@ -3,15 +3,17 @@ import "./App.css";
 import Hero from "./Hero/Hero";
 import Hero2 from "./Hero/Hero2";
 import { VStack } from "@chakra-ui/react";
-import Hero3 from "./Hero/Hero3";
+import About from "./AboutMe/About";
+import Photography from "./Field/Photography";
 
 function App() {
   return (
     <>
       <VStack>
-        <Hero />
+        {/* <Hero /> */}
         <Hero2 />
-        <Hero3/>
+        <About />
+        <Photography />
       </VStack>
     </>
   );
