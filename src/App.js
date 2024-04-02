@@ -5,6 +5,7 @@ import Hero2 from "./Hero/Hero2";
 import { VStack } from "@chakra-ui/react";
 import About from "./AboutMe/About";
 import Photography from "./Field/Photography";
+import Output from "./Output/Output";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Hero2 />
         <About />
         <Photography />
+        <Output />
       </VStack>
     </>
   );

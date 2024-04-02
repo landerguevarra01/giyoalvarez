@@ -1,4 +1,4 @@
-import { Box, Grid, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Grid, HStack, Image, Text, VStack, Link } from "@chakra-ui/react";
 import React from "react";
 import Heropic from "../Img/Group 1.png";
 import Herojoker from "../Img/Layer 4.png";
@@ -6,6 +6,7 @@ import Herohaha from "../Img/Layer 5.png";
 import Heroabout from "../Img/Layer 5 1.png";
 import Herome from "../Img/Layer 6.png";
 import Heroline from "../Img/Layer 7.png";
+import { FaFacebook, FaInstagram } from "react-icons/fa6";
 
 function About() {
   return (
@@ -45,6 +46,26 @@ function About() {
                   illustration, digital illustration, and the captivating world
                   of tattoo artistry.
                 </Text>
+                <Box mt="36px" color="#a7202b">
+                  <HStack gap="56px">
+                    <Link
+                      href="https://www.facebook.com/gio.alvarez11"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      fontSize="44px"
+                    >
+                      <FaFacebook />
+                    </Link>
+                    <Link
+                      href="https://www.instagram.com/giyowzki/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      fontSize="44px"
+                    >
+                      <FaInstagram />
+                    </Link>
+                  </HStack>
+                </Box>
               </Box>
             </Grid>
           </Box>
