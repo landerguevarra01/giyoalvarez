@@ -78,7 +78,7 @@ const HoverImage = ({ src, bgColor }) => {
 
   return (
     <>
-      <VStack w="1440px" h="1024px">
+      <VStack >
         <Box
           ref={imageRef}
           width="585px"

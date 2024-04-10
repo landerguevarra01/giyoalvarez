@@ -1,60 +1,91 @@
-import { Box, Image, Text, VStack, Flex } from "@chakra-ui/react";
-import React from "react";
-import Heropic from "../Img/Layer 1 copy.png";
+import { Box, Image, VStack, useBreakpointValue } from "@chakra-ui/react";
+import React, { useState } from "react";
+import Heropic from "../Img/Layer0.png";
 import Herofname from "../Img/Layer 2.png";
 import Herolname from "../Img/Layer 3.png";
 import Herosmile from "../Img/smile.png";
 
 function Hero2() {
+  const [isClicked, setIsClicked] = useState(false);
+  const imageSize = useBreakpointValue({
+    base: "280px",
+    md: "570px",
+  });
+  const fnameImageSize = useBreakpointValue({
+    base: "210px",
+    md: "470px",
+  });
+  const lnameImageSize = useBreakpointValue({
+    base: "300px",
+    md: "740px",
+  });
+  const smileImageSize = useBreakpointValue({
+    base: "130px",
+    md: "300px",
+  });
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+  };
+
   return (
     <>
-      <VStack justifyContent="center" alignItems="center" w="1440px" h="1024px">
+      <VStack>
+        <Box position="relative" zIndex="2" mt={{ base: "50px", md: "110px" }}>
+          <Image src={Heropic} h={imageSize} />
+        </Box>
         <Box
-          position="relative"
-          justifyContent="center"
-          alignItems="center"
-          overflow="hidden"
+          position="absolute"
+          zIndex="1"
+          mt={{ base: "30px", md: "90px" }}
+          mr={{ base: "20px", md: "50px" }}
+          sx={{
+            "@keyframes bounceFname": {
+              "0%, 50%": { transform: "translateY(-100%)" },
+              "50%": { transform: "translateY(10%)" },
+            },
+            animation: "bounceFname 3s",
+          }}
         >
-          <VStack>
-            <Image
-              src={Heropic}
-              w="523px"
-              h="1788px"
-              mx="auto"
-              position="absolute"
-              zIndex="2"
-              mt="90px"
-            />
-            <Image
-              src={Herofname}
-              position="relative"
-              zIndex="1"
-              mt="70px"
-              w="666px"
-              h="335px"
-              mx="auto"
-            />
-            <Image
-              src={Herolname}
-              position="relative"
-              zIndex="3"
-              mt="-40px"
-              mb="400px"
-              w="1134px"
-              h="528px"
-              mx="auto"
-            />
-            <Image
-              src={Herosmile}
-              position="relative"
-              zIndex="3"
-              mt="-520px"
-              mb="500px"
-              w="335px"
-              h="200px"
-              mx="auto"
-            />
-          </VStack>
+          <Image src={Herofname} w={fnameImageSize} />
+        </Box>
+        <Box
+          position="absolute"
+          zIndex="2"
+          mt={{ base: "140px", md: "350px" }}
+          ml={{ base: "20px", md: "35px" }}
+          sx={{
+            "@keyframes bounceLname": {
+              "0%, 50%": { transform: "translateY(100%)" }, // Start from bottom
+              "50%": { transform: "translateY(-10%)" }, // Move up
+            },
+            animation: "bounceLname 5s",
+          }}
+        >
+          <Image src={Herolname} w={lnameImageSize} />
+        </Box>
+        <Box
+          position="absolute"
+          zIndex="2"
+          mt={{ base: "300px", md: "595px" }}
+          ml={{ base: "20px", md: "-10px" }}
+          sx={{
+            "@keyframes fadeInUp": {
+              from: { opacity: 0, transform: "translateY(20px)" },
+              to: { opacity: 1, transform: "translateY(0)" },
+            },
+            "@keyframes rubberBandStretch": {
+              "0%": { transform: "scale(1)" },
+              "30%": { transform: "scale(1.25)" },
+              "70%": { transform: "scale(0.75)" },
+              "100%": { transform: "scale(1)" },
+            },
+            animation: `fadeInUp 5s ease-in-out ${
+              isClicked ? ", rubberBandStretch 1s" : ""
+            }`,
+          }}
+          onClick={handleClick}
+        >
+          <Image src={Herosmile} w={smileImageSize} />
         </Box>
       </VStack>
     </>
@@ -62,56 +93,3 @@ function Hero2() {
 }
 
 export default Hero2;
-
-{/* <VStack justifyContent="center" alignItems="center" w="430px" h="930px">
-  <Box
-    position="relative"
-    justifyContent="center"
-    alignItems="center"
-    overflow="hidden"
-  >
-    <VStack>
-      <Image
-        src={Heropic}
-        w="178px"
-        h="608px"
-        mx="auto"
-        position="absolute"
-        zIndex="2"
-        mt="160px"
-      />
-      <Image
-        src={Herofname}
-        position="relative"
-        zIndex="1"
-        mt="150px"
-        ml="-40px"
-        w="226px"
-        h="114px"
-        mx="auto"
-      />
-      <Image
-        src={Herolname}
-        position="relative"
-        zIndex="3"
-        mt="50px"
-        mb="400px"
-        w="386px"
-        h="179px"
-        mx="auto"
-      />
-      <Box ml="100px">
-      <Image
-        src={Herosmile}
-        position="relative"
-        zIndex="3"
-        mt="-350px"
-        mb="500px"
-        w="114px"
-        h="67px"
-        mx="auto"
-      />
-      </Box>
-    </VStack>
-  </Box>
-</VStack> */}
