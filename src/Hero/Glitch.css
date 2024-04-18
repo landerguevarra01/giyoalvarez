@@ -9,6 +9,8 @@
     display: block;
     width: 420px;
     /* Set width to 420px */
+    filter: drop-shadow(0 0 10px rgba(83, 8, 121, 0.5));
+    /* Add drop shadow */
 }
 
 .glitch__layers {
