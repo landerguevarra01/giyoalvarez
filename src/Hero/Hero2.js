@@ -4,6 +4,7 @@ import Heropic from "../Img/Layer0.png";
 import Herofname from "../Img/Layer 2.png";
 import Herolname from "../Img/Layer 3.png";
 import Herosmile from "../Img/smile.png";
+import "./Glitch.css";
 
 function Hero2() {
   const [isClicked, setIsClicked] = useState(false);
@@ -31,7 +32,18 @@ function Hero2() {
     <>
       <VStack>
         <Box position="relative" zIndex="2" mt={{ base: "50px", md: "110px" }}>
-          <Image src={Heropic} h={imageSize} />
+          <div className="glitch">
+            <img
+              src="https://github.com/landerguevarra01/giyoalvarez/blob/master/src/Img/Layer0.png?raw=true"
+              alt=""
+              style={{ width: "420px" }} // Set width to 570px
+            />
+            <div className="glitch__layers">
+              <div className="glitch__layer"></div>
+              <div className="glitch__layer"></div>
+              <div className="glitch__layer"></div>
+            </div>
+          </div>
         </Box>
         <Box
           position="absolute"
