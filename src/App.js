@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import Hero2 from "./Hero/Hero2";
 import About from "./AboutMe/About";
 import Photography from "./Field/Photography";
+import "./App.css";
 import {
   Box,
   Grid,
@@ -22,10 +23,14 @@ function App() {
 
   // Ref for About section
   const aboutRef = useRef(null);
+  const worksRef = useRef(null);
 
   // Function to scroll to About section
   const scrollToAbout = () => {
     aboutRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+  const scrollToWorks = () => {
+    worksRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -50,7 +55,7 @@ function App() {
             width="100%"
           >
             <HStack>
-              <ChakraLink onClick={scrollToAbout}>
+              <ChakraLink>
                 <Image src={Herosmile} alt="Logo" w={logoWidth} />
               </ChakraLink>
             </HStack>
@@ -59,7 +64,7 @@ function App() {
               <ChakraLink onClick={scrollToAbout} fontSize={fontSize}>
                 About
               </ChakraLink>
-              <ChakraLink href="#works" fontSize={fontSize}>
+              <ChakraLink onClick={scrollToWorks} fontSize={fontSize}>
                 Works
               </ChakraLink>
               <ChakraLink href="#contact" fontSize={fontSize}>
@@ -72,15 +77,19 @@ function App() {
         <Box mt={marginTop}>
           {" "}
           {/* Main container */}
-          <Hero2 zIndex="2" />
+          <Box bgColor="">
+            <Hero2 />
+          </Box>
           {/* About section */}
-          <Box ref={aboutRef}>
+          <Box ref={aboutRef} bgColor="">
             {" "}
             {/* Assign ref to About section */}
-            <About zIndex="2" />
+            <About />
           </Box>
-          <Box>
-            <Photography/>
+          <Box ref={worksRef} bgColor="">
+            {" "}
+            {/* Assign ref to About section */}
+            {/* <Photography /> */}
           </Box>
         </Box>
       </VStack>
@@ -89,3 +98,5 @@ function App() {
 }
 
 export default App;
+
+//toadjust tewhite at the bottom add mb="200px" to the bottom box created

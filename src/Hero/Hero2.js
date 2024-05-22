@@ -31,12 +31,12 @@ function Hero2() {
   return (
     <>
       <VStack>
-        <Box position="relative" zIndex="2" mt={{ base: "50px", md: "110px" }}>
+        <Box position="relative" zIndex="2" mt={{ base: "50px", md: "40px" }}>
           <div className="glitch">
             <img
               src="https://github.com/landerguevarra01/giyoalvarez/blob/master/src/Img/Layer0.png?raw=true"
               alt=""
-              style={{ width: "420px" }} // Set width to 570px
+              style={{ width: "625px" }} // Set width to 570px
             />
             <div className="glitch__layers">
               <div className="glitch__layer"></div>
@@ -78,7 +78,7 @@ function Hero2() {
         <Box
           position="absolute"
           zIndex="2"
-          mt={{ base: "300px", md: "595px" }}
+          mt={{ base: "300px", md: "650px" }}
           ml={{ base: "20px", md: "-10px" }}
           sx={{
             "@keyframes fadeInUp": {

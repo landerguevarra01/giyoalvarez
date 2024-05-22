@@ -12,28 +12,31 @@ import "./AGlitch.css";
 function About() {
   return (
     <>
-      <HStack mt="180px">
-        <VStack mr="160px">
-          <Box mt="50px" ml="-100px">
-            <Image src={Heroabout} w="400px" />
-          </Box>
-          <Box ml="-60px">
-            <Image src={Heroline} w="500px" />
-          </Box>
-          <Box>
-            <Text lineHeight="28px" mt="60px" ml="70px" letterSpacing="2px">
-              I'm Gio Lazaro Alvarez, a passionate and versatile multimedia
-              <br />
-              artist with a distinctive flair for creative expression. My
-              journey
-              <br /> in the realm of visual arts encompasses a diverse range of
-              <br />
-              skills, including photography, traditional illustration, digital
-              <br />
-              illustration, and the captivating world of tattoo artistry.
-            </Text>
-          </Box>
-        </VStack>
+      <HStack mt="120px">
+        <Box>
+          <VStack mr="160px">
+            <Box mt="50px" ml="-100px">
+              <Image src={Heroabout} w="400px" />
+            </Box>
+            <Box ml="-60px">
+              <Image src={Heroline} w="500px" />
+            </Box>
+            <Box>
+              <Text lineHeight="28px" mt="60px" ml="70px" letterSpacing="2px">
+                I'm Gio Lazaro Alvarez, a passionate and versatile multimedia
+                <br />
+                artist with a distinctive flair for creative expression. My
+                journey
+                <br /> in the realm of visual arts encompasses a diverse range
+                of
+                <br />
+                skills, including photography, traditional illustration, digital
+                <br />
+                illustration, and the captivating world of tattoo artistry.
+              </Text>
+            </Box>
+          </VStack>
+        </Box>
         <Box position="relative" mt="-30px">
           <Box style={{ position: "relative", zIndex: 2 }}>
             {/* <Image
